@@ -16,6 +16,9 @@ import com.dzq.follow.presenter.implPersenter.SplashPersenterImpl;
 import com.dzq.follow.presenter.implView.ISplash;
 import com.dzq.follow.util.ImageLoader;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 
 /**
  * Created by dzq on 2016/9/6.
@@ -23,8 +26,9 @@ import com.dzq.follow.util.ImageLoader;
 public class SplashActivity extends BaseActivity implements ISplash {
 
 
-    private TextView copyrightTv;
-    private ImageView splashImgView;
+    @BindView(R.id.tv_copyright) TextView copyrightTv;
+    @BindView(R.id.iv_splash_img) ImageView splashImgView;
+
     private SplashPersenterImpl splashPersenterImpl;
 
 
@@ -32,6 +36,7 @@ public class SplashActivity extends BaseActivity implements ISplash {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        ButterKnife.bind(this);
         copyrightTv = (TextView) findViewById(R.id.tv_copyright);
         splashImgView = (ImageView) findViewById(R.id.iv_splash_img);
 

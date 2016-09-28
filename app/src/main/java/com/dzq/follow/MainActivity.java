@@ -37,14 +37,17 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             if (position == 0){
                 return new HomeFragment();
+            } else if(position == 1){
+                return new PersonCenterFragment();
             }
             return new PersonCenterFragment();
         }
 
         @Override
         public int getCount() {
-            return 2;
+            return 3;
         }
+
     };
 
     @Override

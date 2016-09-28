@@ -21,12 +21,18 @@
             android:name=".activity.SplashActivity"
             android:launchMode="singleInstance"
             android:theme="@style/MyAppTheme">
+
+        </activity>
+
+        <!--############## DEMO #################-->
+        <activity android:name=".Demo.Demo1Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--############## END ##################-->
     </application>
 
 </manifest>
